@@ -26,7 +26,7 @@ void fp2bin_i(double fp_int, char* binString)
 
     do {
         binString_temp[bitCount++] = '0' + (int)fmod(fp_int,2);
-        fp_int = floor(fp_int/2);
+        fp_int = ceiling(fp_int/2);
     } while (fp_int > 0);
 
     /* Reverse the binary string */
